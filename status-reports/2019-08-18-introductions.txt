@@ -1,0 +1,307 @@
+Workshop on mathematical data
+
+OpenDreamKit, ODK, Cernay
+
+2019-08-18 -- afternoon -- introductions
+
+[Katja]
+
+Welcome everyone.
+
+Thanks for coming and humouring what used to be my pet project
+and after growing beyond my expectations is now a group effort,
+and I'm really happy about that.
+
+We're going to talk about math data, and figure out how we can improve things.
+
+Logistics
+
+- we'll cook our own food; for each meal we need volunteers for 3 roles:
+  main cook; help cook; set up and clean up table
+- please join the github repo for the workshop;
+  it has links to other workshop related things
+- Erik, Julian, Samuel know the place well, ask them practical questions
+- general idea of the workshop
+  - work on things, in relaxed way, in all sizes of groups
+  - brief plenary 10:00 daily, to plan work and groups for the day
+  - status report before dinner each evening
+  - please say things like "hey everyone at 2pm I'll demo this or that"
+  - dinner usually planned for 19:00 but typically happens at 20:00 or 21:00
+- Katja's hopes for this week, see readme, please expand
+  - user stories
+  - we're building a system, that Tom just refactored and made better
+    - import datasets into it
+    - abstract polytopes / maniplexes, Gabe
+    - lattices, Jukka
+    - small groups library, Michael Torpey
+  - all these datasets consist of a list of objects and a list of properties
+    - balance implementation simplicity, importance to mathematicians
+    - describe the theories
+      - ...
+      - formalisation aspects
+      - Dennis + Florian will help with formalisation related things
+
+---
+
+[Samuel goes pick up Michael Torpey and misses most of the introductions;
+please everybody write something here if you want]
+
+---
+
+- Erik Bray
+  software engineer
+  undergrad in CS at UMass Amherst
+  working as software engineer for OpenDreamKit the last 3.5 years
+  primarily for Sage, a little bit for GAP
+  lots of software engineering experience
+  web dev, backend stuff, frontend stuff
+  can help with a lot of things
+  not any stakes in the workshop goals, but sympathetic to them
+  and here to help in whatever way I can
+
+- Michael Torpey
+  University of St Andrews
+  started undergrad there 2009
+  blackhole of academia, sucked into it
+  in the last year since i ...
+  working for OpenDreamKit
+  memoisation in GAP and Python systems
+  to start with, made "pypersist",
+  a Python library for caching stuff to disk or databases online
+  tested out by a couple of people
+  since then been developing analogous thing for GAP
+  possibly share between GAP and Python program
+  this week, i'm hoping even today:
+  make a release of this GAP package that has reached enough maturity
+  i'd like to explore ideas
+  OpenDreamKit ends at the end of August and from 01 September 2019
+  i'll be associate lecturer, education-focused, in St Andrews;
+  since it'll be education-focused, I might be writing less software,
+  so this week hoping to wrap up software in various ways,
+  to say "this is what I did in my year as a software engineer"
+  [Someone asks] are you in the same department as Peter Cameron?
+  [Michael] I go to the pub with Peter Cameron every week, but don't
+  work with him; he's in the school of math i'm in the cs school
+
+- Samuel Lelièvre
+  - research and teaching mathematician at Orsay
+  - I like to make lists, to classify, to organise
+  - I am subscribed to a lot of mailing lists
+
+- Michael Kohlhase
+  Primož Potočnik, one of the organisers, couldn't make it here;
+  has been banding about the idea of having a journal of math data,
+  or math datasets
+  - if we had a system like the one we're dreaming of,
+    this could be a way to combine a repository of datasets,
+    together with a way of making academic reputation
+  - the people who are usually going to do these datasets have to publish
+  - Primož's idea, I've been part of these kind of things,
+    never kind of worked in other communities as well
+  - people like me should advise young people to not invest in
+    dataset libraries, software, because they're not going to get credit;
+    so either discourage it and do only theory
+    or make it so people can get academic credit out of it
+
+  - I'm convinced this can be done, we need a variety of personal resources
+    - mathematicians with good standing in the field who can become guardian angels
+    - people who can provide hosting, so we can point to some landing page
+    - people who are actually willing to review datasets; seems to be the biggest hurdle
+      - if we can't review it, a journal will go haywire
+      - if we can, i'm sure we can pull this off
+    - it seems to me quite a few potential reviewers are sitting around this table
+      so just wanted to put this thing up in the air
+
+- [Jukka] oeis website and database, + journal of integer sequences 
+- [Michael K] likewise we have the mizar library, and the journal of formalized mathematics
+- [Gabe] sanitize datasets; I happen to know from working with these things
+- [Michael K] bipartite submissions: paper that says I did this in that, and dataset
+- [Michael K] I can't be the person really driving this; I see myself as a partial facilitator
+  - we would need a couple of people who are behind this idea
+    and who are willing to make an initial editorial board
+  - make this an online open-access thing
+  - openmath society could facilitate that and give it an institutional home
+  - technical infrastructure
+    - general lets-make-a-journal
+    - database
+  - community willing to commit to 2 years of reviewing until there are ~ 20 articles
+    so people know this exists
+  - we need a few people to write articles, others to review
+
+[Gabe] Ars mathematica contemporanea is my favourite journal
+the journal of "stuff that Tomasz Poznański likes"
+[Katja] it's online, open-access, has a good index
+
+[Jukka] in my job I have teaching duties; the rest of the time they are quite happy
+if I do community service
+
+[Michael K] Guardian angels might not have the time to take care of it
+but might have enought time and be willing to advertize it.
+They will only get involved if there is a credible set of people who promise
+to do 2 years of work.
+To start a journal, you need ~ 10 articles to get you past the first 6 months.
+
+Reviewing of datasets must exist in other disciplines.
+
+[Samuel] there is a journal called "Rescience" dedicated to reproducibility
+
+[Michael K] We can require that code is provided.
+
+[Julian]
+mathematicians are extremely reluctant to share their code,
+just because they are terribly ashamed of it
+
+[Julian]
+the way the arxiv does it is you need to be whitelisted by someone for some subject area
+
+[Jukka]
+the oeis way is you can publish or just submit data;
+it's good to have things loose enough
+
+[Gabe]
+Some mathematicians keep semi-public datasets, eg research by PhD students
+
+[Michael]
+you could also have a public escrow; let something host the data, keeping it private,
+and it goes public unlicensed if you stop pressing the button to keep it private
+
+[Julian]
+what license
+
+[Michael K]
+- i would go for CC licences, eg CC-BY
+- you could have something like access control
+- eg I have arxiv data in xml, i'm not allowed to make it public,
+  but I have a cooperative for math data linguistics
+  where members of this cooperative can get access
+- [someone asks] can anyone put copyright on mathematical truths?
+- [MK] mathematical truths might not be copyrightable,
+  but the expression of the mathematical truths are copyrighable
+
+-----
+[Katja]
+- my phd advisor was generating lists of objects,
+  and storing things in text files, either as csv text files,
+  or maple code that produces the objects
+- I thought that was sad and you should have a database
+- I had 3 pieces of knowledge that I thought were good to have for a simple thing
+  - knew about coding a website
+  - knew about the math
+  - knew about databases
+- fast-forward 5 years, and I've convinced a few people that this stuff was cool;
+  mathematicians produce data (you know that)
+- to produce data, you need to say what kind of data 
+  we've called it concrete data, relational data; not happy with either name
+  either too general or doesn't communicate well
+  so if you come up with a good name we'll be happy
+- the data we'll be interested in covering
+  - table, has list of edge-transitive graphs in the first column
+  - more columns give group size, stabilizer size, and more properties
+  - each atomic datum is a "concrete mathematical object"
+    (as opposed to "a paragraph of text", or "an algorithm to compute the value")
+[Gabe]
+- what about families of discrete objects with some number of parameters
+[Katja]
+- one thing we think characterizes the kind of objects we want to make databses of
+  is "representation theorems"; can label each object canonically
+  - eg small integers between -100 and 100
+- in OEIS, sometimes you have a closed formula for the whole sequence
+[MK]
+- very often we have representation theorems,
+  even though we might not think of them as such
+  - we distinguish "concrete data" and "symbolic data"
+  - some infinite graphs can be represented as finite objects
+  - you can also have symbolic data collections
+  - theorem prover libraries are datasets of symbolic data;
+    they are very different in nature; what they talk about can be all over the map
+  - there's also "metadata": who published what; how does that relate to other things
+  - "narrative data": math papers; the names we give things;
+    while "the Petersen graph" might be defining to some people,
+    but other people can 
+  - we believe all four types of data
+
+[Katja]
+- famous mathematician Coxeter finds a graph he finds interesting;
+  asks a colleague if this graph has been studied before; colleague answers
+  "yes, we call it the Coxeter graph, there's a paper by you about it"!
+
+- develop a description language that lets us use the description to
+  - on one hand, describe the dataset enough so that the system
+    can take that description and generate the database part and frontend part for it
+  - on the other hand, ontology, math-in-the-middle
+
+- there's a few things this description can contain
+  - provenance (useful to have) and metadata about the collection
+  - info on how the information can be stored, and what the information is
+  - ...
+
+[Michael K]
+- integers can be encoded in various ways
+- in many databases, it wasn't clear what the encoding was
+- codecs are a way of systematising that
+- elliptic curves
+- "at the mathematical level"
+- separate the database level from the math level
+  - John Cremona or Neil Sloane
+    know the 
+    they don't quite see that there are software engineering decisions
+    that have to be retaken after a while
+    in math you get strong by confusing representation level and object
+    whereas in cs you get strong by not confusing them
+  - in math, every sorting algorithm is the same: same input, same output
+  - in cs, you care about complexity
+- having databases
+- even things as lmfdb where they have invested person-centuries
+  if you want some data, you write an email to John Cremona asking
+  "please can you give me the list of ..."
+  - the mathematicians who have sufficient cs background to understand
+    the difference between representation and object
+  - the computer scientists who understand that they are the same
+
+- one thing I would like to add to this 
+  FAIR = "findable, accessible, interoperable, reusable"
+  - findable: search engines: we don't have them
+  - accessible: sometimes... many datasets are in laptops in the attic
+  - interoperable: have not seen one
+  - reusable: not seen one
+  That's not up to snuff!!
+  Those things we need to do somehow, and establish a standard!
+  The field is open. Just by doing something that works allows us
+  to set the standard.
+
+[Andrea] the system already has an editor for codecs?
+[Michael] it's called Emacs
+
+[Tom]
+- rough overview
+- the system is built based on Django on the backend (it's a web framework)
+- the database SQLite, tested on Postgres as well
+- client side, using React.js, modern client-side framework written in JavaScript
+- declare your set of codecs by saying "this codec uses database integers"
+- "data in this codec is displayed to the user like that"
+- react component, html, css, mathml, png, ... anything displayable in a web browser
+- each codec has exactly one representation; you can have several codecs
+- each codec additionally has information about what kind of queries it supports
+- codecs in some way hide part of the query language
+
+[Michael K]
+- assumption: there will be ~100 codecs
+- maybe ~20 codecs for groups
+- after a while, a phd student who graduates wants to take their phd and go to industry,
+  the advisor will say "please deposit your data in the standard place"
+- it should be something that takes an afternoon, or at most a week,
+  and you can say "I don't need a new codec, i'll use the one by my supervisor"
+- we hope to create a network effect where
+  - the contribution cost is in the size of your contribution
+  - the value effect is in the size of the network
+- that's what we call "math data hub"
+
+[Katja]
+- Very hard to find datasets if you don't know the authors or their friends.
+- Not uncommon to see say on stack overflow questions like "is there a database of xxx".
+- To this end, I've started a list of databases
+
+-----
+What datasets are present here
+
+- ...

@@ -1,0 +1,148 @@
+odk-cernay-2019-08-22-multilingual-mathematical-glossary.txt
+
+
+Michael Kohlhase explains to Samuel Lelièvre
+his project of a multilingual mathematical glossary.
+
+- it is semantic
+- it is a glossary: has definitions for the objects
+- written in a semantic variant of LaTeX called sTeX
+
+Can run pdflatex over it, it gives you a pdf.
+
+Currently
+
+- no French
+
+The pdf looks normal but has invisible semantic markup,
+from which we can generate translations, glossaries, etc.
+
+Mockup
+
+https://beta.mathhub.info/applications/glossary?lang=en&language=en
+
+
+For example, bijective has French (copied from the French wikipedia just to have something).
+
+
+When you have something like this, you can also look at say the German version.
+
+You need definitions which are semantic.
+
+Demo
+
+```
+\begin{mhmodnl}[creators=miko]{naturalnumbers}{en}
+\begin{definition}
+The set $\NaturalNumbers$ of \defiis{natural}{number}
+```
+
+we have
+- one signature
+- variable number of semantic language bindings
+
+Set NN of natural numbers
+
+
+Would like to have sTeX localized in French.
+This means having the keywords
+
+github.com/slatex/stex
+
+
+Then
+
+    $ cd /opt/s/sTeX/sty/core/statements
+    $ cp statements-finnish.ldf statements-french.ldf
+
+    $ cd /opt/s/sTeX/sty/core/sproof
+    $ cp sproof-finnish.ldf sproof-french.ldf
+
+    $ cd /opt/s/sTeX/sty/core/problem
+    $ 
+
+    $ cd sTeX/sty/core
+    $ DIR=statements
+
+
+pull request
+
+trefi = term reference
+
+
+Glossary
+
+SMGloM = semantic multilingual glossary of mathematics
+
+- home: https://gl.mathhub.info/smglom
+  - that's a gitlab server
+
+- Translate definitions: defi, defii, defiii
+- Term references: trefi, trefii, etc,
+  - They reference defi's from other theories
+
+$ git clone https://gl.mathhub.info/smglom/arithmetics
+$ cp naturalnumbers.de.tex naturalnumbers.fr.tex
+
+congruence.tex
+
+- modsig = module signature
+- imports: import stuff
+- symbol definitions
+
+for congruence we have modulo
+
+naturalnumbers.tex
+
+- modsig: module signature
+- imports: we import set
+- symdef: symbol definitions
+  a symdef is a relatively powerful macro that generates
+  what I call a semantic macro
+
+- this here generates \NaturalNumbers
+- with the presentation \mathbb{N}
+
+When I write \NaturalNumbers, pdflatex sees `\mathbb{N}`
+but if I generate content mathml, i get a math object,
+in this case the object NaturalNumbers from the theory NaturalNumbers
+
+A symbol may have both notation and verbalisation.
+
+Eg here: verbalisation in german: Natürlichen Zahlen; notation: \mathbb{N}
+
+That's what a glossary is supposed to do: keep a record of notations
+and verbalisations in various languages.
+
+----
+Ambiguities exist.
+
+Disambiguating is for mathematics not linguistics.
+
+
+-----
+For the glossary, there are 873 modules, with 1815 symbols,
+referenced ~ 4000 times.
+
+There is a "tools" package on github to generate the statistics.
+
+-----
+Contribution guidelines are at
+
+https://gl.mathhub.info/smglom/meta-inf/wikis/home
+
+One more thing
+
+- symdef: for functions, eg the "successor" function
+
+  \symdef[name=successor]{natsucc}[1]{\prefix\natsuccOp{#1}}
+
+Example: Taylor series
+
+- all the math formulae are written in semantic form.
+
+Taylor-series.en.pdf
+
+Taylor-series.en.pdf
+
+

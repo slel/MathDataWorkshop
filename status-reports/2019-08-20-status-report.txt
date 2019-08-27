@@ -1,0 +1,157 @@
+status-report-2019-08-20
+
+Tom
+- got two more collections into the system today
+- minor corrections and improvements to the importer
+- graphs and their duals
+- importer can handle that now
+- now easier to import csv data
+- half-listening to the interviews, got some ideas
+- want to meet with Andrea over her summary of interviews
+- [Andrea] my excel file is astoundingly large by now
+  and still would like to interview Nicolas
+- [Nicolas] I'm happy to have been volunteered
+- [Gabe] how many of Jukka's suggestions were contrary to mine?
+- [Andrea] 60 to 70 % were coinciding
+- xxx
+- plan for linking elements
+- might be useful also for xxx
+- we are at 4 datasets now and two halfway in
+
+Michael Torpey
+- worked on small groups
+- 
+
+Dennis
+- colored graphs
+
+Nicolas
+- I arrived here and brought beamer, beer, blender, cider
+
+Florian
+- working on MMT
+- diagram, category, morphisms, edges
+- important that I can query that diagram in constant times
+- get all morphisms between two given nodes
+- need to cache paths in the graph
+- Gabe and I designed an algorithm
+- was halfway into xxx when we started playing xxx
+- all the bugs in MMT are fixed that I introduced
+- [Nicolas] a good person to ask might be Sebastian Gutsche
+- talked to Michael K about deliverables
+- [Michael K] talked to Nicolas and we have a solution
+  that is minimally invasive on your time
+- worry about ODK expenses after 31 Aug,
+  our uni says no expense can be reimbursed
+  including for the review in Luxembourg;
+  not clear which one it is / should be
+  - can only reimburse expenses corresponding to actions before 31 Aug
+  - no expenses can be claimed after 31 Aug
+  - no reimbursement can happen after 31 Aug
+  - what about costs for the project review in Luxembourg
+
+Jukka
+- guinea pig for Andrea, I think I spent 10 hours there
+- it was nice to look at 
+- gave her my opinions
+- it was much more informative once we had some real data there;
+  playing with fake data is not the same
+- rest of the day, struggled installing software, converting data,
+  working on getting lattice database into the system
+- how to represent graph
+  - machine readable string in standard format;
+    then some program will interpret it and display it to the user
+- so we have lattices almost there
+- [Michael] i'm expecting your results in the morning
+- use existing format with existing code
+- realized that Michael Torpey is mtorpey who solved my problem 6 months ago
+
+
+
+Michael Torpey
+- made first release of the memoisation package for GAP
+- added all the features
+- fist release is 0.8 to try to keep it in line with pypersist
+- most of the rest of the day was adding documentation
+- my estimate of yesterday of doing it in one hour was wrong
+- if anyone would like to have a look at the docs, I would
+  like to see if they can figure out how to use it from that
+- found a few things that more likely needed explanation
+- [Jukka] I guess I would be your typical end user so happy to test
+- it's memoisation with an "s" because Markus Pfeiffer insists
+- [Gabe] reminds me of an anecdote with Marston Conder
+- [someone] then write new sealand with an s
+- want to finish up getting the small groups database started
+- want to look into supporting codecs in link with memoisation
+- [Florian] one more reason to have implementation of codecs in Python
+
+Andrea
+- I was tiring people, and shopping and peeling surpisingly large number of vegetables
+- I had fun today, nice to have test subjects who are enthusiastic and engaged
+- started writing things down, invested already 1.5 hours in writing in down;
+  there are a lot of ideas; tomorrow it will prgress
+- I still need beginners
+- [Katja]
+- [Florian] where is the button to get direct access to the sql query
+
+Gabe
+- subgraphs, connected components of graphs, paths that are all one color
+- and yet as far as math goes it's not that complicated
+- hope to return tomorrow with some more general predicates or proerties
+  on polytopes, and formalize those
+- the regular polyhedra database was formalised, uploaded by Tom
+- gave the second one in the correct format
+- hoping tomorrow: enlarge one of these datasets; enrich one of these
+  datasets with 
+- might consist in overwriting the data and asking Tom to reimport it
+- hope to look at the GAP memoisation package tomorrow too
+- [Katja] case of import of a database with intersection to another one
+  or a previous version
+- [Katja] if we were a real platform doing this seriously we would ask
+  the submitter to give us, for each thing they submit that are already in,
+  what is the index of the thing already in the database
+  - oh that
+
+Julian
+- built Py3 docker images for SageMath; they are available on DockerHub
+- they will be built once someone (likely Erik) presses "positive review"
+  on the corresponding tickets
+- status of Python 3: almost there, only 4 files still have failing doctests
+
+Samuel
+- unix time in cygwin in windows
+- talked with Odile about Jupyter
+- talked with Katja
+- got interviewed by Andrea
+
+
+Odile
+- this morning prepared presentation for my interview tomorrow
+  for extending my involvement in odk-style things after odk ends
+- made a jupyter notebook for querying z/4 database
+  - showed it to katja
+- cake with Samuel for tomorrow
+- worked on new version of sage-explorer which will be lighter and better
+- [Katja] the jupyter notebook was very impressive, very cool
+
+Michael K
+- missed the group photo that there was supposed to be
+- the plan was to use the fact that we have peak participation
+- [Katja] it seems 
+- achieved not much else
+- talked to quite a lot of people
+- went shopping more than once
+- quite a lot of discussions with various people that were very satisfying
+
+Katja
+- my bad for the photo, we'll fix something from various 13-person photos
+- spent time this morning talking with Michael K about my job next year
+  - two days per week on math data
+  - my talk with xxx ann arbor xxx
+- will work on implementation under the guidance of Michael K
+- did some work: picked some of the review suggestions
+- talked to some people, including Odile
+- helped a bit with the cake
+
+With this I conclude the second progress report of the first math data workshop.
+

@@ -1,0 +1,412 @@
+odk-cernay-2019-08-22-status-report.txt
+
+Samuel
+- welcomed Meriem Bouguezzi and helped her install FEniCS
+  - she is a PhD student at CEA and LMO, working in numerical analysis of PDEs
+  - she and I were teaching "Python for numerical analysis" to second-year students
+    with me
+  - installed FEniCS in "Ubuntu 18.04" in "Windows Subsystem for Linux" in "Windows 10"
+- phone call with Martine Brilleaud from Pole editions
+  about a one-page or two-page piece in the next issue of
+  "Tangente education" which will be shipped to ~ 15k math teachers
+  in high-shool and junior-high-school
+- [Nicolas] we need press releases
+  - Katja: translate or write for Slovenian math society
+  - Erik: a lot of universities have a press office
+  - Michael: somebody should write a text about the finish in English,
+    all members take it to their university
+  - Nicolas: Hans and others wrote a paper about what ODK brought to their community
+    - 
+- MiKo introduced me to ["semantic TeX"](https://github.com/slatex/stex) and to the
+  ["semantic multilingual glossary of mathematics" project (SMGloM)](https://gl.mathhub.info/smglom)
+  - home: https://gl.mathhub.info/smglom
+  - meta and infrastructure: https://gl.mathhub.info/smglom/meta-inf/
+- under MiKo's guidance, I translated sTeX keywords to French
+  - https://github.com/slatex/sTeX/pull/249
+- I suggested publishing SMGloM statistics; which MiKo recorded as an issue:
+  - publish statistics using continuous integration tools
+    - https://gl.mathhub.info/smglom/meta-inf/issues/19
+
+Tom
+- did a lot of conceptualising today, where
+  - I explained Erik the entire structure of mathdatahub
+  - talked to Katja of some subset of that, and multiple provenance
+  - [Katja]
+    - we think it will eventually happen that we have
+      multiple datasets containing the same object
+      - if both give different values for  how to deal with that
+      - if both datasets give the same value, should we record
+        that it was obtained by both authors independently
+  - [MK] if this takes off, and submitting data gives you academic credit,
+    we will get people resubmitting existing stuff
+
+Dennis
+- morning: discussion about provenance
+- afternoon: sat down with MK and basically formalised that theory
+- more sTeX stuff
+
+Odile
+- worked on new version of Sage explorer
+- when you click on xxx, it opens a new explorer
+- [Nicolas] did you speak with Andrea
+- [MK] we should have a demo session tomorrow
+
+Jukka
+- provenance
+- read half a page of Katja's paper; pointed out a few things to fix
+- Tom, SQL
+- Florian, type theory
+- hike to the mill and beyond, brought everyone back
+  - [Katja] saw lizards, horses, tracks of cyclists
+
+Michael T
+- this morning, wrote a user story, had provenance sketched for small groups
+- enjoyed the provenance chat
+- spent most of the day fixing bugs, one was intresting, most others were dull
+  - things to do with files being locked in pypersist
+- new tag of memoisation?
+- enjoyed every other aspect of being here
+
+MK
+- Florian, Nicolas and I succeeded in plumbing the last WP6 deliverable
+- it looks like it's going to be massive soon, thanks to Tom writing stuff,
+  and florian copy-pasting various papers to make a substantial report,
+  and hopefully me next week writing an introduction that ties it all together
+- we are referencing "converting Isabelle to OMDoc"
+- we might one day have ~ 10 TB of Coq export (estimation of Claudio)
+
+Andrea
+- you haven't seen me a lot today because I was working in the other house
+- had fun implementing again; i so seldom have time to do that!
+- I thought now that actually probably it runs on Internet Explorer,
+  we could make a test session with the eye tracker tomorrow
+
+[Michael K] we will leave before breakfast on Saturday
+[Nicolas] rooms need to be cleared by 10am on Saturday;
+one of the houses 
+
+[When do people leave]
+- Fri afternoon
+  - Michael T
+- Fri evening
+  - Erik
+- Sat morning
+  - 07:00 MK and AK leave, Gabe
+  - 10:00? Odile
+- Sat 
+- Sun
+  - Erik might come back  
+
+Gabe
+- found bug in GAP's IO package
+- talked with Tom and Katja about what format researchers could provide
+  graphs ot the database
+- working on putting my polytope database into that format
+- my computer is doing it, forgot to make some progress bar
+
+- [Nicolas] a nice feature of GAP is you can break a running computation,
+  explore it and restart it
+- [Dennis] intellij can do that; you need to attach the debugger
+  but you don't have to include break points
+
+Katja
+- skip
+
+Samuel
+- see above
+
+Erik
+- found out there are two existing python wrappers for nauty
+  - both are outdated, and in a state of varying quality of code,
+    written by researchers that happen to 
+    and not updated since 2015
+  - i could do yet another one, but it might end up in same state
+- one of them does not have a public repository, 
+- one of them is in a mercurial repository on Bitbucket
+- could contact these people or mirror their code somewhere else
+- the one on bitbucket used cython and i liked it a little more
+- the other one written in pure python and bits of c
+- the bitbucket one is by Peter Dobcsanyi
+  [Katja] Peter left academia; bitter
+
+Florian
+- things already mentioned by others
+- might be worth reserving a significant chunk of tomorrow for demos
+- let's start tonight; maybe lunch could be arranged around demos
+
+Nicolas
+- apart from things already mentioned
+- I'm about to download ~500 
+  sagemath, display, latex
+
+Erik
+- reviving Planetaryum as an engine for creating an official
+  SageMath notebook repository
+  - badly needs to exist on the sagemath.org
+  - multiple people asked me where can I find good notebooks
+  - currently they are scattered
+- continuous integration against various versions of Sage,
+  and warning
+
+Nicolas
+- interacts in the wiki, Jeroen started to make them a collection of notebooks
+
+Katja
+- fixed the census paper a little bit further
+- this is the last progress report we have at peak attendance, so
+  - I would like to thank everybody for making this workshop
+    feel it was going by itself; 
+  - we made a lot of progress; I hope you will say in a few years,
+    "I was there when it all started"
+
+Michael
+- I think there were two great contributions
+  - Nicolas having done lots of workshops here
+  - Katja, much against her instinct, not doing the workshop on the Slovenian coast,
+  but one of the big contributions here that Katja has done,
+  is bringing new people who were sorely needed to this workshop,
+  namely Gabe and Jukka; that was very important
+  she managed to interest more people who in the end could not come;
+  Primoz; "House of graphs" people; etc
+- i think it's been Katja's achievement in the limited time we've had
+  between the idea of this workshop and running out of money
+
+Nicolas
+- thanks to Samuel for catching Katja in the first place
+- [MK] the facilitator with a big F
+
+On with the demos
+
+## Demos
+
+### Tom: MathDataHub demo
+
+Databases: currently 5
+
+- Additive bases
+- Functions on Z/3
+- Jane's collection
+- Regular maniplexes
+- Regular polyhedra
+
+Try regular maniplexes, from Gabe
+
+columns:
+- Schläfli symbol                   list of integers
+- Characterising relators           list of strings
+  (really they should be elements in the free group on 3 elements)
+- Rank                              integer
+  (actually this is just rank 3 maniplexes so far)
+- Group size                        integer
+- f-vector                          vector of integers
+- Orientable                        boolean
+
+This table has 664 rows.
+
+You can filter things.
+Let's filter by group size:
+- all with group size 144
+  - there are 39
+- [Florian] suggestion: on hover on column headers,
+  display definition and type information
+- can click on an item:
+
+     item 1356ae4e...
+     all data about this graph
+
+- [Nicolas] suggestion: profile picture of author, like on github; social aspect of it
+- [Florian] you picked uuid4 identifiers, couldn't you use more meaningful identifiers
+
+Katja: how many characters to tolerate for a global identifier
+if you have to paste it in a paper.
+
+Florian: i like Cremona's identifiers like "11a1" a lot
+
+MK: anything meaningful without a catalogue is misguided.
+
+Gabe: in regular polytope community, we use short identifiers,
+that convey some information; eg
+
+MK: just supply a catalogue lookup application
+
+Nicolas: the question of having identifiers is related to that of having
+a hashing key.
+
+Tom: I wanted to say something about that.
+We need a way to find if two objects are the same.
+One mathematician comes up with a set of objects.
+Another mathematician comes up with a set of objects.
+We want to know if there are common objects.
+Sometimes an author will say something like "these two properties
+together identify the object".
+
+Nicolas
+- here the viewing is done with a "spreadsheet metaphor".
+- in spreadsheets you can click on the column header,
+  it pops up a list of the values that exist in that column,
+  and lets you filter by clicking
+- presumably there are javascript tools for that from "big data"
+
+Tom
+- there is a count query before the full query
+
+Dennis: can it sort
+Tom: currently no
+
+Columns: drag and drop select, unselect, or change order
+- selected
+- other
+
+Tom
+- you can share the link
+
+Florian: arbitrary sql queries?
+Tom: planned, but there are 
+
+-----
+Michael Torpey
+
+first thing to demo:
+- I recently wrote a Package Manager for GAP
+
+```
+LoadPackage("PackageManager");
+InstallPackage("https://gap-packages.github.io/Memoisation/PackageInfo.g");
+```
+
+pip install --user pypersist
+
+These two packages should be able to talk to each other.
+
+LoadPackage("")
+
+python
+
+Our usecase is that a foolish is computing the prime factors of an integer.
+
+from time import sleep
+from pypersist import persist
+
+prime_factors is going to take an integer
+
+I start with @persist, and because I want it to communicate with GAP,
+I'll add a few things
+
+@persist(
+    cache="file://shared",
+    key=lambda n: n,
+    hash=str,  # the default, sha256, would give huge hashes; str uniquely identifies integers
+    pickle=lambda L: "\n".join(map(str, L)),  # we want GAP to be able to unpickle
+    unpickle=lambda s: [int(n) for n in s.split("\n") if n],
+)
+
+def prime_factors(n):
+    factors = []
+    d = 2
+    while n > 1:
+        while n % d:
+            d += 1
+        factors.append(d)
+        n /= d
+    sleep(2)
+    return factors
+```
+
+```
+gap> prime_factors := MemoisedFunction(Factors);
+```
+This would work with IO's pickle, and GAP's ... which would
+not communicate with Python.
+
+```
+gap> prime_factors := MemoisedFunction(Factors, rec(
+>       funcname := "prime_factors",
+>       cache := "file://shared",
+>       key := IdFunc,
+>       hash := String,
+>       pickle := L -> JoinStringsWithSeparator(List(L, String), "\n"),
+>       unpickle := str -> List(SplitString(str, "\n"), Int)
+> ));
+```
+
+Just from defining the function the directory "shared" was defined.
+
+```
+>>> prime_factors(100)
+```
+
+Now `100.out` exists
+
+```
+gap> prime_factors(102);
+#I  Memo key: 102
+#I  Key unknown. Computing!
+[2, 3, 17]
+
+```
+
+
+```
+>>> prime_factors(1)
+```
+
+```
+gap> Factors(1);
+[ 1 ]
+gap> prime_factors(1)
+Key known. Loading from cache.
+[ ]
+```
+
+
+```
+>>> prime_factors.cache[1]
+```
+
+We could specify `store_key`.
+
+As it is we can still access 
+
+
+
+```
+>>> prime_factors.cache[1]
+```
+
+```
+gap> prime_factors(1)
+#I  Not known. Computing.
+```
+
+Can be used for testing.
+
+Nicolas: for October we should demo this, not with integers,
+but with more complicated object that use MitM.
+
+MK: I've long thought about factoring polynomials.
+
+MT: currently MongoDB
+
+Florian: You should be able to use cache from MathHub.info.
+
+Florian: support multiple cache locations to check?
+MT: not now, but good idea.
+
+Florian
+- if hash function not injective you could store
+  multiple key value pairs in the file named with this hash
+- also need key value pairs for uploading to math data hub
+
+Tom
+- any plans to extend to other languages?
+  - I can imagine MATLAB users
+  - or non-math; node or js
+
+MT: I don't have plans to do that, but if someone would like
+to hire me to do it, why not.
+
+
+-----
+PKGMAN_CustomPackageDir
+
+PKGMAN_SetCustomPackageDir

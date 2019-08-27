@@ -1,0 +1,319 @@
+odk-cernay-2019-08-23-MK-SL.txt
+
+Michael K, Samuel
+
+flexiformal isations of natural numbers
+
+today the formal counter part where formal means in a logic
+
+structurally these two are nearly identical
+we have theories and a couple more relations on the formal side
+but the essential data model behind those are identical
+
+we formalise these into what we call theories
+which is an object-oriented way to write math
+
+the smaller the theory, the easier to reuse
+
+Examples
+
+
+- file `naturals.mmt`
+
+```
+namespace http://mathhub.info/MitM/smglom/arithmetics
+```
+
+three level of objects
+
+- "module" level is the highest level
+  - has theories, theory interpretations, comments
+  - a module delimiter delimits those; the fat vertical bar (unicode)
+
+- inside module level objects we have "declarations"
+  - declarations declare constants, axioms, theorems, types, ...
+  - example:
+    ```
+    succ : NN -> NN | # Succ 1 prec 5 | = [n] succ_nat_lit n
+    ```
+  - we have declaration level delimiters
+
+- objects
+  - object level delimiters
+
+Delimiters are always nested in the same order.
+
+```
+theory NaturalNumbers : base:?Logic =
+    include hand-> base:?NatLiterals ||
+```
+in our theories, we write unicode usually by their latex equivalent prefixed with a j
+
+We have a notation definition that essentially says we give the object a unicode string
+
+we would expect
+    nats : type | # N ||
+    zero
+
+but we don't need them
+
+In this line:
+
+    ```
+    succ : NN -> NN | # Succ 1 prec 5 | = [n] succ_nat_lit n
+    ```
+
+1 means first element, prec 5 means precedence 5 (for operation precedence)
+
+We now give a couple of logical axioms about succ.
+
+They come in the form of a declaration for a type of the form "it holds that xxx"
+
+This is essentially the type of "all proofs that prove that this is true"
+cf Curry-Howard isomorphism, which is built in to the system quite deeply.
+
+What you see here
+
+    axiom_succ1 : {x} |- 0 ≠ Succ x
+
+where "{x}" is read as "for arbitrary x"
+
+the second axiom is
+
+    axiom_succ2 : {x:NN,y:NN} |- Succ x =. Succ y -> x =. y
+
+(in other words injectivity)
+
+Then we have the induction axiom
+
+    axiom_Induction: {A : NN -> bool} |- A 0 -> ({x} A x -> |- A (Succ x)) -> {x} |- A x
+
+Some of the symbols are not declared
+- they can come from the included theories, for example NatLiterals;
+  in this case 0 is one of them and NN is one of them
+- there are more, for example ≠ or = or -> or |-
+
+They come from the theory that we call the meta theory,
+which is the theory that we use to talk about theories that talk about math.
+
+That has things like the curly braces {}, the "it holds that", the =, etc.
+
+Every symbol comes from somewhere, but there are various ways it can get in there.
+
+The meta theory here, which could be called a logic, is also a theory.
+We can write it down in exactly the same way.
+
+The system allows you to bring your own logic.
+
+If you want to talk about math in first order logic, we can.
+More conveniently we can use higher order logic (in particular
+we need it for the induction axiom).
+
+In the MitM ontology we have a higher order logic,
+which as subtyping, etc., many things that informal math
+has but logics typically don't.
+
+One of the ultimate goals of the MitM project is to find language features
+that informal mathematics has and uses, and to make those formal
+so that we can have a formal language which is practically equally
+expressive to informal mathematics.
+
+That's really what we're trying to do.
+
+An easy example is naturals.mmt.
+
+The thing you should note is that we build with these kind of object level
+declarations, we build the objects of mathematics.
+With the axioms we build the proofs of mathematics.
+
+We have proofs and objects in the language at the same time,
+and that's useful.
+
+The next theory we do here is natural nubmer arithmetics.
+
+```
+theory NaturalArithmetics : base:?Logic = 
+  include ?NaturalNubmers ||
+  include hand-> bazse:?DescriptionOperator
+```
+
+`DescriptionOperator` is another meta level theory
+that we will need for subtraction.
+
+We have the `addition` constant which is a binary operation,
+it has type `NN -> NN -> NN`
+
+We give it the notation `1 + 2 prec 15`
+which means put the first argument, the sign +, the second argument
+and precedence 15.
+
+
+Two axioms:
+```
+axiom_plus1
+axiom_plus2
+```
+these are all we need for addition.
+
+We also say this is `plus_nat_lit`
+so that we can compute 3 + 17 without doing succ succ succ which would suck.
+
+You can think of this as the specification.
+- type specification
+- notation specification
+- behaviour specification in the axioms.
+
+Can use this to prove that + is associative, as a theorem.
+
+Then we start off with subtraction
+subtraction on the natural numbers is a partial function.
+
+We make subtraction a three-argument function.
+Something that takes an n and an m, and a proof that m + x = n
+which is a natural number, actually that there is exatctly one x
+that is a natural number and the result of subtraction.
+
+We can write take three arguments; the square bracket is a lambda
+
+```
+[n,m,p] iota [x:NN] m + x =. n
+```
+
+iota is ...
+predicate ...
+unique ...
+
+that's the typical ... way of doing ...
+
+Can read that as "give me that x such that m + x = n"
+
+That is one natural way of doing subtraction on the natural numbers.
+
+You can only do something with iota if you happen to have a proof
+that the argument is a singleton set, lying around.
+
+And that's the proof we give ourselves as the third argument.
+
+This in a way is a "fundamentalist definition" of subtraction.
+You always have to give a proof with it; which can be impractical
+but if you don't care about practicality it's okay.
+
+In practice you would do other things.
+Coq and Isabelle only use total functions.
+There is nothing that is undefined.
+We are just not telling you what 3 - 7 is.
+You're never going to be.
+
+Hol-light does even worse, and tells you it's zero,
+and deals with the consequences somehow.
+
+This is kind of the fundamentalist way of doing it.
+But we are going to see better ways of doing it.
+Using these ideas you can go on to do multiplication division
+exponentiation, roots order, max, min, ... all of those.
+Just write them down, give the axioms, or define them in terms
+of already given stuff.
+
+We are also collecting the Coq way of doing it.
+We have an export of
+- the Coq library 
+- the archive of formal proofs (Isabelle)
+into this form.
+
+Something that is interesting is the prime numbers for instance:
+we make the prime numbers to be a type.
+Types are a thing that we can quantify over, eg "for all x that are a prime number".
+
+```
+primes : type | = langle x : NN+ | |- x ≠ 1 wedge forall [y : NN] (y | x) => (y =. 1 vee y=. x) rangle
+```
+
+Integer interval starting at one:
+```
+fromOneTo : NN+ -> type | = [n] langle x : NN+ | |- 1 ≤ x wedge x ≤ n rangle
+```
+
+Important to tell the type checker that primes are a subtype of natural numbers.
+
+This is different from the GAP notion of prime numbers, which could
+also be formalised. We could formalise that and call it GAP_prime.
+
+One place where you can see this is for posets and lattices.
+
+```
+theory semilattice_theory : ...
+  include algebra/bands?BAnd/band_theory
+```
+
+then you can basically have what we call a view.
+
+semilattices into posets.
+
+to do that:
+
+```
+axiom_idempotent = meetIdempotent
+axiom_associative = meetAssociative
+axiom_commutative = meetCommutative
+```
+
+Whenever you have a view you can copy the theorems.
+
+Views are a huge copy machine for theorems.
+
+That's what in math we call representation theorems.
+For example Stone's representation theorem, which connects
+xxx and xxx.
+
+Andrew Wiles's contribution to the proof of FLT
+was a representation theorem that certain elliptic curves
+are modular forms.
+Once you can do that you can pull over the whole theory.
+
+We have an algorithm that can find such views, modulo renaming,
+and that's very nice.
+
+You can build this up to boolean algebra.
+
+At some point our type checker is not strong enough
+to see that the types match up.
+
+If you have a strong logic, that taxes that type checker.
+
+A type checker is also a proof checker via Curry-Howard.
+
+Research program (MK, Dennis, Florian)
+How can we build languages where the type checker still is useful?
+
+things that we take for granted in mathematics.
+
+Whenever you have a type error, or something does not make sense,
+MMT tells you "I can't typecheck that".
+Whenever MMT does not raise a typechecking error, you know it
+at least internally makes sense.
+It could still be that the thing we are calling a ComplementedLattice
+is not what a mathematician would call a complemented lattice.
+
+If we were collecting boolean algebras in math data hub,
+we could use the type checker to check if they have the claimed type.
+
+and bridge the gap between informal and formal.
+
+We sat down with Gabe for his additive bases, and formalised all the properties.
+His dataset being in there is something where you can then connect the two worlds.
+
+When you have these two worlds you can make things like
+tgview3d.mathhub.info
+
+There is a tutorial for interested people:
+
+https://uniformal.github.io
+
+has the necessary documentation
+then there is OMDoc/MMT for mathematicians
+
+https://uniformal.github.io/doc/tutorials/
+
+
+It basically uses elementary algebra to build up.
+

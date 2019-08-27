@@ -1,0 +1,232 @@
+odk-cernay-2019-08-19-status-report.txt
+
+https://github.com/OpenDreamKit/MathDataWorkshop/wiki/Status-report-2019-08-19
+
+2019-08-19
+
+Samuel
+- with Katja, Erik, Michael T: shopped and picked up people
+- opened issues in mathubinfo documentation repo issue tracker
+  to suggest four more databases to include in mathdb.mathhub.info:
+  - https://github.com/MathHubInfo/Documentation/issues/3
+  - https://github.com/MathHubInfo/Documentation/issues/4
+  - https://github.com/MathHubInfo/Documentation/issues/5
+  - https://github.com/MathHubInfo/Documentation/issues/6
+- didn't have the rights to tag the issues "math db"
+- [Michael] anybody who needs rights, let me know
+- created a wiki page for "graph software":
+  https://github.com/OpenDreamKit/MathDataWorkshop/wiki/Graph-software
+- with Julian last night, thought about the problem of building a polygon
+  with prescribed angles; easy for convex polygon, less so if not;
+  this is needed for the flatsurf / libflatsurf project
+- this afternoon with Julian and remotely Vincent, weekly flatsurf call
+- with Erik and Julian, worked on SageMath in Cygwin on Windows 7:
+  - failing manifold doctests due to low-resolution time in Win7
+    https://trac.sagemath.org/ticket/28365
+  - failing padic doctests due to low-resolution time in Win7
+    https://trac.sagemath.org/ticket/28366
+- using Google Compute Platform Research Credits (obtained following
+  Dima Pasechnik's example) and Julian's help, set up orchestrator vm
+  on gcp for gitlab-ci runners to help with SageMath development
+- forgot to enable the runners so they ran zero job
+- with Erik and Julian, planned discussion on Python 3 and SageMath,
+  has not happened yet
+
+Odile
+- I am Odile, I work with Nicolas in OpenDreamKit
+- I work on visualisations of math objects on Jupyter, on Sage
+- today I was happy to be introduced to math data
+- discussion with Tom on the internals, database, query, schema
+- discussion with Gabriel and Andrea, mostly listening
+- so interaction from both sides which is really efficient, thank you
+
+Tom
+- talked with several people
+- gave two demos
+- many discussions with many people about what the system is,
+  what they would like, what they are missing
+- added two complete collections today:
+  - they were given to me
+  - they are completely insertable in the database
+- on day 1, 1 collection was added;
+  on day 2, 2 collections were added;
+
+Michael
+- most of my day: grant proposal writing sessionin Berlin,
+  attended remotely
+  - "mardi" = math research data initiative consortium
+  - only reconciliation for those 5 hours of committee meeting
+    is that we might get lots of money starting early next year,
+    something like 3 M€ / year over 5 years, for math data,
+  - unfortunately will be spent on things I'm not so interested in
+  - 120 page proposal; using google docs... ugh
+
+  [Erik] could be worse, I'm on a team where collaboration is by email with word documents
+
+  - introduced Jukka and Gabe to formalization using MMT,
+    to the point to turn them over to Dennis who's much
+    better at formalizing
+
+Florian
+- introduced myself to Gabe today
+- talked to other people
+- fixed a couple of MMT bugs
+- a bit behind on the release
+- need to fix bugs I introduced
+
+Julian
+- talked a lot about polygons last night
+- implemented serialisation to json for some library I'm working on
+
+Michael
+- first half of my day: obtaining + preparation of food
+- second half: attack on mathematics, with two prongs
+  - initial release of gap memoization package,
+    which would be the analogue of pypersist
+  - talked with Katja
+    extraction
+    big csv file, turned it into a big json file
+    soon to be turned to a fairly small database
+  - [Tom] I could have saved you time
+
+Andrea
+- set up the eye tracker, realized so far I had done this female thing
+  of letting others set it up, 
+- realized the math data hub is not working with Internet Explorer
+- [Tom] works with Edge, not with Internet Explorer on Windows 7
+- the eye tracker
+- we have to update the license, which is ~5 k€
+- this morning I realized I did have Internet Explorer on my computer
+- I changed plans and actually started a paper prototype for the math data hub site
+- Gabe was my first advanced user
+- we found out quite nice things; you don't always need an eye tracker
+- we discussed a lot with Gabe and Odile
+- still have to write a summary of that and to discuss it with Katja
+- I would like to point out that this paper prototype, even though it is so manual,
+  actually that's on purpose: if you use a paper prototype, people are willing to
+  criticise; if you've already put a lot of work in a website, people don't dare
+- [Katja] overheard a bit, sounded like good ideas were flying
+- [Katja] I think Samuel would be a good interviewee
+- [Jukka] I usually have a lot of opinions about user interfaces
+
+Jukka
+- started my day by spamming everyone in my department about Katja's
+  collection of databases
+- Tom told me how to format the data
+- we didn't put in lattices but something simpler: additive bases
+- Tom has them in the database now
+- all minimal additive bases, up to 25 elements
+- we wrote a schema for them
+- we went on to formalize those things with Dennis
+- we have kind of a theory for additive bases
+- i was introduced to wonderful things about MMT
+- it seems a wonderful system for generalising everything to the absolute
+- we even found some nice little bugs
+- we ran into some ideas of removing unnecessary restrictions or assumptions
+- we found the watermill and our way back
+
+Dennis
+- made acquaintance with Perl, don't think we are going to be good friends;
+  this was not related to math data but to STeX
+- [Michael] stex is our attempt to doing mmt in latex
+- sat down with Jukka
+
+Erik
+- did not do anything especially fun or particularly related to math data
+- worked with Samuel on Sage on Windows related issues
+- discussed with Tom
+- overheard many interesting things about codecs
+- won't be there most of tomorrow but back on Wednesday
+- love to do code review
+ [Tom] I'll give you an overview on Wednesday
+
+Gabe
+- shuffled around some pieces of paper, which was a prototype
+- regular abstract polyhedra
+  - not all the properties I would like but good starting set of such things
+- got walked thrhough some of the formalization stuff
+- have a tentative plan for implementing edge-labeled graphs,
+  then properly coloured edge-labeled graphs, then maniplexes,
+  then polytopes, each being a subset of the one before
+- I'm also working on producing a dataset that is a little broader
+  than the one I have right now, but which people in my community like
+  - what am I going to do with that dataset once I have it, I don't know
+
+Katja
+- talked a lot with Tom, and some with Florian
+- went on a hike
+- wrote up schema with Michael T and Gabe
+- listened up on conversations
+- I think we're doing pretty well for day 2
+- hopes for tomorrow
+  - add a subset of lattices
+  - regular maniplexes whenever they happen
+  - will try to do my part
+  - pull in the symmetric graph things from my computer
+  - would be great if some more formalization happens
+  - would be nice to work on the missing codecs
+- xxx it appears to be nice and they might be willing to share it
+
+Tom
+- one of the datasets only on my laptop
+- the other one already on the website
+
+Michael
+- one thing I haven't seen yet, or only stubs of, is what is a collection,
+  or what is a dataset
+  - in particular, what are the kind of metadata people want to see about them
+    - when was it started, who did it, what was done, why do we care
+    - i heard things about codecs and interfaces, but not much about
+      those things I'd want to know
+Tom
+- how long did it take to compute
+- what is the license
+- what kind of aggregated information
+
+Katja
+- what do I need to cite for the results to my query
+
+Katja
+- alpha deployment of math data hub is on mdhalpha.mathhub.info
+  - please everybody have a look, click around, and complain a lot
+
+Jukka
+- a collection of something, vs the collection of all somethings
+- [Gabe] like classification versus collection
+
+Tom
+- Return results to a query, with an english sentence,
+  and "complete: True" and ...
+
+Katja
+- if you add this to your request, then it's actually complete
+
+Jukka
+- also we could look at the queries, "oh by the way there's a name
+  for what you are looking for, it's called a geometric lattice"
+
+Gabe
+- along the lines of what is a collection, you might imagine
+  - we have a collection of polytopes,
+    and someone is only interested in
+  - [Michael] "pinning" some filters
+- ability to name the things with those filters applied
+- [Katja] and probably ability to
+
+Michael
+- particularly interesting case of "complete" is when it has no element
+
+Katja
+- first progress report concluded, we've achieved a lot,
+  feel proud of yourselves and continue talking
+
+Katja
+- we need a cook or chef for tomorrow lunch
+
+Michael
+- will go early buy bread
+- 
+
+After the status report: Tom, Katja, Florian, Julian, Erik discussed
+requiring users to login, throttling for non-logged-in users, ...
+

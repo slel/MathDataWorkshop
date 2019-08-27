@@ -1,0 +1,31 @@
+odk-cernay-2019-08-20-status-report.txt
+
+Samuel
+- with Julian, set up gitlab-ci runners to produce SageMath Docker images
+- pushed new Docker images to DockerHub
+- improve make output in gitlab-ci
+  https://trac.sagemath.org/ticket/28369
+
+- tech notes (to be put somewhere else)
+
+    -----
+    $ docker login
+    $ docker pull registry.gitlab.com/sagemath/dev/trac/sagemath-dev:u-saraedum-mrs-22-docker-python3-py3
+    $ docker tag registry.gitlab.com/sagemath/dev/trac/sagemath-dev:u-saraedum-mrs-22-docker-python3-py3 sagemath/sagemath-dev:develop-py3
+    $ docker push sagemath/sagemath-dev:develop-py3
+    -----
+
+    -----
+    todo: Build Sage with Conda on macOS
+    - visit mamba home page, download latest release for your choice of OS
+    - in the terminal,
+      ```
+      $ sh Minimamba.sh
+      ```
+    - etc
+    -----
+
+- built Docker image of Python3_based SageMath
+- note (good to keep for KPIs)
+  - docker: 10k downloads
+  - conda: 5k downloads

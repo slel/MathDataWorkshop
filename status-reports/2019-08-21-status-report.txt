@@ -1,0 +1,129 @@
+odk-cernay-2019-08-21-status-report.txt
+
+Jukka
+- did some more data file conversions
+- so we basically have 400k lattices
+  (i have 11 billion of them if you want)
+- had a hilarious session of looking at how you incorporate
+  latex with semantics (stex) and I wrote something about
+  additive bases in Finnish, and translated some other things
+  to Finnish
+- went on a hike
+- talked with Katja about using Nauty and how graphs
+  are being handled or can be handled
+- started reading Katja's paper but got grabbed away
+
+Katja
+- any disastrous quick fixes before camera-ready version in 1.5 day
+- more importantly, I would like this to grow into a real survey
+  census journal thing
+- [Nicolas] what kind of journal, for what readers?
+
+Michael T
+- talked with Jukka: visualisations of DiGraphs
+- talked to Gabe, this confirms at least one person has
+  now used the memoisation package, on Windows;
+  it did not crash immediately
+  - we used it to memoise a function (not Fibonacci)
+    searching for quotients
+  - that involved writing our own pickle function
+  - it ended up working pretty good; it's now working
+  - this confirms the package works on other people's computers,
+    and on windows
+- spoke to Nicolas about concurrency, how different threads
+  could cache and make a mess
+  - have a prototype for pypersist, the chances people will be
+    multithreading GAP are not immense
+    - [Nicolas] but multiprocessing; forks
+  - should be done in GAP as well
+  - that needs a few touches to it
+- did a lock file thing, not a RAM thing
+
+Florian
+- spent time at LRI
+- will program later tonight
+
+Tom
+- went over results of the interviews Andrea subjected 3 people to
+- summarised the results with Andrea and Katja
+- got down to a few keypoints
+- met with Nicolas and Michael T regarding notebook search
+  - search all juptyer notebooks on github
+- implementation progress on some of the issues Andrea raised
+- now have the state of the page in the url
+- added descriptions to datasets
+- added mathjax-style rendering (with KaTeX but mathjax-like)
+-
+
+Michael K
+- semantic multilingual glossary of mathematics now has Finnish
+  (almost as much Finnish as Turkish)
+- learnt that Finnish inflects math symbols
+- bike tour with Nicolas's tandem and Nicolas and Andrea
+  and actually riding his tandem
+- vertical detour turned out to be very aptly named
+- very happy with the day
+
+Dennis
+- formalised 
+  - wrote down type, and what definition should be
+- did a little stex stuff; thought deeply
+
+Odile
+- prepared then had my interview with human resources
+- the lady said she has computing background but did not
+  know any of the languages I cited
+- had a long nap at home, did small things in the house, came back
+- set appointment with Albane for October to study her needs
+
+Nicolas
+- script to extract latex out of notebooks
+- failed to use gitlab api to search for notebooks
+- took care of reimbursements
+- enjoyed bike ride
+- talked about future funding
+
+Gabe
+- tortured various people and myself with a Windows machine
+- got something working
+- did a little work trying to generate more data;
+  with limited success at the moment
+  - now that i have memoisation in gap, sure to not redo stuff
+- [Nicolas] that would be a usecase, cool
+
+Andrea
+- overwhelmed when I summarised all the three interviews
+- got 47 points or so which I needed to explain or at least mention
+  to Tom and Katja
+- summarized that in an Excel worksheet; it's on the MathDataWorkshop repo
+  so everyone can have a look
+- formalised that in an issue in the GitHub repo; you can comment there
+- tried to get all the opinions in there
+- these are actually enough suggestions for now
+  so did not do interviews with more people
+- my plan is now to start a different prototype for the interaction
+  selecting filters or conditions
+  - click prototype
+  - only started, because was then invited to a bike ride with a tandem
+  - learned I have to trust my husband
+
+Katja
+- wrote conclusion that was missing
+- community aspect of MathDataHub
+- there are things that are important for the interface
+  which we as developers cannot provide because domain-specific knowledge
+  is necessary; and it might be unrealistic to require it from
+  the database author
+- languages: as soon as you want definitions in multiple languages...
+- this is something we will need to consider in the future
+- [Andrea] that's the further future but have to lay the ground now
+- [Tom] my takeaway: implement it now
+- [Gabe] do you want a gatekeeper for each dataset? for each language?
+- the graph canonicalisation software tends to have a naughty interface;
+  engineering help would be appreciated
+  - things are well defined but on a technical level it is unfriendly
+
+Samuel
+- nothing to report; will do things tonight
+
+

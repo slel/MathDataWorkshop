@@ -1,0 +1,36 @@
+odk-cernay-2019-08-23-day-planning.txt
+
+
+
+## Day planning for Fri 2019-08-23
+
+Tom
+- today
+  - work on writing up editorial process for MathDataHub
+  - work on provenance
+- next few weeks
+  - csv import
+
+Michael Torpey
+- look at what codecs exist so far
+
+Nicolas
+- data will be harvested after the demos
+- would like to see something done with harvested data soon after
+- coordinate deliverables
+
+Gabe
+Jukka
+- play around with sTeX
+
+Odile
+- get some chocolate and make a chocolate mousse
+- discuss with Andrea
+
+
+
+## Demo
+
+Odile: SageExplorer
+
+see also: Nathan Carter's webpage

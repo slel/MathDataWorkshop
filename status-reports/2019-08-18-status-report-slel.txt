@@ -1,0 +1,121 @@
+Workshop on mathematical data
+
+OpenDreamKit, ODK, Cernay
+
+2019-08-18 -- evening -- status report
+
+- org
+  - shop for food and supplies for the workshop
+  - store things in the fridge etc
+  - run the shuttle to get several people here
+- Katja showed me https://mdhalpha.mathhub.info
+  - eager to learn more
+- flat surfaces with Julian Rüth
+  - problem: given a sequence of angles with sup (n-2)*pi,
+    build an n-gon with those angles
+  - hint: Schwarz-Christoffel map
+- get some sleep
+
+-----
+Sun 2019-08-17
+- org
+  - pick up Gabe and Jukka at Orsay, ~ 15:00
+  - shop for celery + cummin + soup cubes
+  - pick up Michael Torpey ~ 17:30
+- self-introductions
+- created page for coding workshops in Cernay
+  https://wiki.sagemath.org/Cernay
+
+-----
+- Gabe +1 617 406 9067
+  https://www.researchgate.net/profile/Gabe_Cunningham2
+
+- Jukka, +358 50 5487897
+  https://www.researchgate.net/profile/Jukka_Kohonen
+
+Gabe flying from Boston: DL404, landed 07:59
+
+https://www.parisaeroport.fr/passagers/les-vols/vols-arrivee/informations-vols-arrivee?paris=Paris%20(Tous)&other=BOSTON&comp=&date=20190818&following=0&schedule=6;12&isArrival=True
+
+Jukka flying from Helsinki: Air France / Finnair, AF5003, AY171 landed 09:59
+
+https://www.parisaeroport.fr/passagers/les-vols/vols-arrivee/informations-vols-arrivee?paris=Paris%20(Tous)&other=HELSINKI&comp=&date=20190818&following=0&schedule=6;12&isArrival=True
+
+https://www.parisaeroport.fr/passagers/les-vols/vols-arrivee/a_cdg?ckey=20190818CAAF%205003%2020190818HEL
+https://www.parisaeroport.fr/passagers/les-vols/vols-arrivee/a_cdg?ckey=20190818CAAY%201571%2020190818HEL
+
+
+- Michael Torpey will arrive ~ 16:40 in Orsay,
+  will text from Orsay and take "RER B bus" to St Rémy
+
+- Florian Rabe will arrive ~22:40 in CDG, then take
+  RER B (bus/train/bus), Samuel will fetch him in St Rémy
+
+- Jardinerie de Chevreuse
+  combines gardening shop + hardware store
+  + fruit and veg + groceries + everything else
+  open daily 09:30--19:00 including Sunday
+
+-----
+Plans for today
+
+- GAP Jupyter kernel
+
+  - issues
+
+    - CoCalc: jupyter GAP kernel
+      https://github.com/sagemathinc/cocalc/issues/1706
+
+    - Getting Jupyter kernel to work on Windows
+      https://github.com/gap-packages/JupyterKernel/issues/45
+
+    - Use py-gap to do the jupyter communication in python
+      https://github.com/gap-packages/JupyterKernel/issues/100
+
+  - py-gap
+    https://github.com/markuspf/py-gap
+
+  - JupyterKernel
+    https://github.com/gap-packages/JupyterKernel
+    https://gap-packages.github.io/JupyterKernel/
+
+- gitlab-ci-orchestrator-bigger.txt
+
+- CoCalc - build SageMath 8.9.beta7 and try py-gap's Jupyter kernel
+  $ echo $PATH
+  /home/user/miniconda3/bin:/cocalc/bin:/cocalc/src/smc-project/bin:/home/user/bin:/home/user/.local/bin:/ext/bin:/usr/lib/xpra:/opt/ghc/bin:/usr/local/bin:/usr/bin:/bin:/ext/data/homer/bin:/ext/data/weblogo:/ext/intellij/idea/bin:/ext/pycharm/pycharm/bin:/usr/lib/postgresql/10/bin
+
+  $ export PATH=/cocalc/bin:/cocalc/src/smc-project/bin:/home/user/bin:/home/user/.local/bin:/ext/bin:/usr/local/bin:/usr/bin:/bin
+
+- sagemath-jupyterlab.txt
+
+- update list of databases
+  - /Users/s/jj/00/mathematical-databases.txt
+  - /Users/s/jj/00/mathematical-databases-todo.txt
+  - /Users/s/jj/00/math-databases-2019-04.txt
+  - SageMath standard / optional / experimental / external packages about databases
+  - GAP packages about databases
+
+- try minimamba on CoCalc
+
+- learn how to make SageMath release notes
+
+- slel-todo-2019-08.txt
+
+- wave-web-accessibility-evaluation-tool.txt
+
+- blog post about Software tools for math in Morelia
+- blog post about Software tools for math in Koper
+
+-----
+
+28318
+linbox for sparse integer matrix
+
+28328
+Fix base ring conversion of non-associative unital algebras
+
+18312
+Construction of a sparse matrix from sparse vectors does not exploit sparseness
+
+18267
